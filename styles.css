@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --Body-Font: 'Work Sans', sans-serif; 
+    --Blue:           rgb(16, 86, 238); 
+    --White:        rgb(255, 255, 255);
+    --Description:     rgb(78, 78, 78);
+    --No-spam:      rgb(163, 163, 163);
+    --Input:        rgb(230, 228, 228);
+    --Placeholder:  rgb(186, 187, 186);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--Body-Font);
+    background: 
+        url(Assets/Background.png) 
+        no-repeat;
+    background-size: cover;          
+}
+
+.main {    
+    width: 375px;
+    margin: 50px auto 50px;
+}
+
+.article {
+    height: 200px;
+    background: url(Assets/Pattern.png) var(--Blue);    
+}
+
+.title {
+    width: 300px;
+    height: 75px;    
+    margin: 0 auto;
+    padding-top: 57.5px;
+    font: 500 1.5em var(--Body-Font);
+    text-align: center;    
+    letter-spacing: 1.25px;
+    color: var(--White);
+}
+
+.section {
+    padding: 24px 15px;
+    background-color: var(--White);
+}
+
+.description--header {
+    margin-bottom: 24px;
+    padding: 0 20px;
+    font: 500 0.78em var(--Body-Font);    
+    text-align: center;
+    color: var(--Description);    
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input--text[type="text"] {
+    width: 225px;
+    height: 40px;   
+    border: none;    
+    border-radius: 4px;
+    outline: none; 
+    background-color: var(--Input);
+}
+
+.input--submit[type="submit"] {
+    width: 114px;
+    height: 40px;       
+    padding: 0; 
+    font: 500 0.8em var(--Body-Font);     
+    color: var(--White);    
+    border: none;
+    border-radius: 4px;
+    background-color: var(--Blue);
+}
+
+.input--submit,
+::placeholder {
+    padding-left: 20px;
+    letter-spacing: 1.25px;
+    color: var(--Placeholder);    
+}
+
+.description {
+    margin: 15px 0 25px;
+    padding-left: 10px;
+    font: 500 0.78em var(--Body-Font);    
+    color: var(--No-spam);     
+}
+
+.avatar {
+    display: flex;
+    gap: 8px;    
+    width: 200px;
+    margin: 0 auto 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    height: 35px;
+    padding-top: 4px;
+}
+
+.name {
+    font-size: 0.9em;
+}
+
+.profession {
+    font-size: 0.9em;
+    color: var(--Graish-Description--header);
+}
+
+.testimonial {    
+    font: 500 0.8em var(--Body-Font);
+    line-height: 18px;
+    text-align: center;
+    color: var(--Description); 
+}
+
+.attribution,
+p {
+    text-align: center;
+}
+
+/* Tablet Viewport 770px */
+@media (min-width: 770px){
+    .main {    
+        width: 430px;
+        height: 540px;
+        margin: 100px auto;  
+        border-radius: 10px;      
+    }   
+
+    .article {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .section {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .description--header {
+        font: 0.91em var(--Body-Font);
+    }
+
+    .input--text[type="text"] {
+        width: 280px;
+        height: 45px;        
+    }
+   
+    .testimonial {
+        font: 0.91em var(--Body-Font);
+    }
+
+    .input--submit[type="submit"] {
+        height: 45px;              
+    }
+}
+
